@@ -1,4 +1,5 @@
-build_run_webserver:
+up:
+	cd files && cd vue3_composition_api && rm -rf node_modules && npm install && npm run serve
 	containerId=$$(docker ps -aqf "name=webserver"); \
 	if [ -n "$$containerId" ]; then \
 	  docker container stop "$$containerId"; \
