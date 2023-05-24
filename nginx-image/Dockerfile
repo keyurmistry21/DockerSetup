@@ -3,7 +3,7 @@ LABEL maintainer="keyur1ved@gmail.com"
 RUN  apt-get -y update && apt-get -y install nginx
 COPY files/default /etc/nginx/sites-available/default
 COPY files/index.html /usr/share/nginx/html/index.html
-EXPOSE 50
+EXPOSE 80
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
 
 #FROM golang:1.18 as build
